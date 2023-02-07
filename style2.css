@@ -563,6 +563,7 @@ img[alt="Tifi-Bird"] {
     }
     .hero-section .hero-cover {
         width: 95%;
+        max-width: 22rem;
         height: auto;
         top: unset;
         bottom: 2rem;
@@ -727,6 +728,10 @@ img[alt="Tifi-Bird"] {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .hero-section .hero-cover {
+        max-width: unset;
+    }
+    
     .step-plan img {
         width: 10rem;
     }
