@@ -1050,21 +1050,21 @@
     </div>
     
     <script type="text/javascript" language="javascript">
-        $(function () {
-            var $win = $(window);
-
-            $win.scroll(function () {
-            if ($win.scrollTop() == 0) {
-                $(".menu-container .logo").css("width", "90px");
-                $(".home-nav").css("backdrop-filter", "none");
-            }
-            else if ($win.scrollTop() > 30) {
-                $(".menu-container .logo").css("width", "36px");
-                $(".home-nav").css("backdrop-filter", "blur(10px)");
-            }
-            //  else if ($win.height() + $win.scrollTop() == $(document).height()) {
-            //     alert('Scrolled to Page Bottom');
-            //  }
+        $( document ).ready(function() {
+            console.log( "ready!" );
+            $(function () {
+                var $win = $(window);
+    
+                $win.scroll(function () {
+                if ($win.scrollTop() == 0) {
+                    $(".menu-container .logo").css("width", "90px");
+                    $(".home-nav").css("backdrop-filter", "none");
+                }
+                else if ($win.scrollTop() > 30) {
+                    $(".menu-container .logo").css("width", "36px");
+                    $(".home-nav").css("backdrop-filter", "blur(10px)");
+                }
+                });
             });
         });
 
