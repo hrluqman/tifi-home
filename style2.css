@@ -353,7 +353,7 @@ img[alt="Tifi-Bird"] {
     right: 0;
 }
 .partners-btn {
-    transform: rotate(25deg);
+    transform: rotate(20deg);
     transform-origin: 75% -10rem;
 }
 .partners-btn .main-sub {
@@ -366,7 +366,7 @@ img[alt="Tifi-Bird"] {
 
 /* CONTACT SECTION */
 .contact-section {
-    aspect-ratio: 3/2;
+    aspect-ratio: 3/1.5;
 }
 .contact-background {
     background-color: var(--gotifi-blue);
@@ -559,7 +559,7 @@ img[alt="Tifi-Bird"] {
         padding-left: 0!important;
     }
     .hero-section .top-copywriting {
-        top: 69%;
+        top: 67%;
     }
     .hero-section .hero-cover {
         width: 95%;
@@ -834,11 +834,11 @@ img[alt="Tifi-Bird"] {
     }
 }
 @media screen and (min-width: 1600px) {
+    .top-copywriting.plan-step img {
+        transform: scaleX(-1) translate(-11rem, 0rem);
+    }
     .exclusive-btn {
         transform-origin: 80% -100%;
-    }
-    .contact-section .contact-box {
-        transform: translateY(-14rem);
     }
     .copyright {
         margin-top: -3rem;
