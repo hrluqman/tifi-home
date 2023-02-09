@@ -89,7 +89,7 @@ nav.home-nav {
     background: rgb(var(--gotifi-yellow-rgb) / 15%);
 }
 .menu-container .menu-content a:hover {
-    color: var(--gotifi-blue)!important;
+    color: var(--gotifi-red)!important;
 }
 .menu-content:hover .menu-border {
     width: 40%;
@@ -157,10 +157,18 @@ img[alt="Tifi-Bird"] {
     font-family: 'PT Sans', sans-serif;
     width: 3rem;
     height: 3rem;
-    border-radius: 3rem;
-    font-size: 2.5rem;
-    padding: 0 0 4px 3px;
     cursor: pointer;
+    font-size: 2.5rem;
+    border-radius: 3rem;
+    padding: 0 0 4px 3px;
+    transition: all 0.1s ease-out;
+    box-shadow: 0px 6px 0px 0px rgb(0 0 0 / 75%);
+}
+.next-btn:hover {
+    box-shadow: 0px 3px 0px 0px rgb(0 0 0 / 75%);
+}
+.next-btn:active {
+    box-shadow: none;
 }
 .next-btn.plan {
     background-color: var(--gotifi-orange);
@@ -535,6 +543,7 @@ img[alt="Tifi-Bird"] {
     }
     .track-cover.mobile {
         display: initial!important;
+        width: 100dvw!important;
     }
 
     /* HERO SECTION */
@@ -543,12 +552,14 @@ img[alt="Tifi-Bird"] {
     }
     .hero-section .section-container {
         margin-top: 8rem;
+        z-index: 2!important;
     }
     .hero-section .head-copywriting h1 span.sub {
         font-size: 1.25rem;
     }
     .hero-section .body-copywriting {
         width: 95%;
+        margin-right: auto;
         line-height: 1.1;
         margin-top: 20%;
         margin-bottom: 0;
@@ -559,7 +570,7 @@ img[alt="Tifi-Bird"] {
         padding-left: 0!important;
     }
     .hero-section .top-copywriting {
-        top: 67%;
+        top: 65%;
     }
     .hero-section .hero-cover {
         width: 95%;
@@ -568,6 +579,7 @@ img[alt="Tifi-Bird"] {
         top: unset;
         bottom: 2rem;
         right: unset;
+        /* z-index: 1; */
     }
 
     /* PLAN SECTION */
