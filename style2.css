@@ -573,8 +573,8 @@ img[alt="Tifi-Bird"] {
         top: 65%;
     }
     .hero-section .hero-cover {
-        width: 95%;
-        max-width: 22rem;
+        width: 95dvw;
+        /* max-width: 22rem; */
         height: auto;
         top: unset;
         bottom: 2rem;
