@@ -319,6 +319,12 @@ img[alt="Tifi-Bird"] {
 .product-description h2 {
     margin-top: 0.5rem;
     font-size: 1rem;
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   line-clamp: 3;
+   -webkit-line-clamp: 3; /* number of lines to show */
+   -webkit-box-orient: vertical;
 }
 .product-cover {
     aspect-ratio: 1/1;
@@ -566,7 +572,7 @@ img[alt="Tifi-Bird"] {
     }
     .hero-section .body-copywriting p:not(:first-of-type) {
         width: 60%;
-        max-width: 16rem;
+        max-width: 20rem;
         padding-left: 0!important;
     }
     .hero-section .top-copywriting {
@@ -574,12 +580,10 @@ img[alt="Tifi-Bird"] {
     }
     .hero-section .hero-cover {
         width: 95dvw;
-        /* max-width: 22rem; */
         height: auto;
         top: unset;
         bottom: 2rem;
         right: unset;
-        /* z-index: 1; */
     }
 
     /* PLAN SECTION */
@@ -649,13 +653,16 @@ img[alt="Tifi-Bird"] {
         aspect-ratio: 9/16;
     }
     .product-content:nth-of-type(1), .product-content:nth-of-type(2) {
-        display: none;
+        display: none!important;
     }
     .exclusive-btn {
         transform-origin: 15% -6rem;
     }
 
     /* PARTNER SECTION */
+    .partner-section {
+        aspect-ratio: 2/3;
+    }
     .partner-container {
         width: 80%;
         transform: translateY(-2rem);
@@ -722,6 +729,7 @@ img[alt="Tifi-Bird"] {
         margin-top: 0!important;
     }
     .connect {
+        background-color: var(--white);
         margin-right: auto;
     }
     .connect p {
@@ -742,6 +750,12 @@ img[alt="Tifi-Bird"] {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .hero-section .hero-cover {
         max-width: unset;
+    }
+    .body-copywriting p:not(:first-of-type) {
+        font-size: 1rem;
+    }
+    .book-transport {
+        transform: translateY(0.9rem);
     }
     
     .step-plan img {
@@ -774,7 +788,7 @@ img[alt="Tifi-Bird"] {
         width: 45%;
     }
     .product-content:nth-of-type(2) {
-        display: block;
+        display: flex!important;
     }
 
     .exclusive-btn {
