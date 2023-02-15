@@ -10,7 +10,7 @@
     --gotifi-red: #e43938;
     --gotifi-green: #39a735;
     --gotifi-blue: #61c7f1;
-    --gotifi-yellow: #fbe814;
+    --gotifi-yellow: #ffed00;
     --gotifi-yellow-rgb: 251 232 20;
     --gotifi-orange: #ef8e01;
 }
@@ -36,6 +36,13 @@ a:hover {
     text-decoration: none!important;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .main-container {
     max-width: 1920px;
     margin: 0 auto;
@@ -47,7 +54,6 @@ nav.home-nav {
     position: fixed;
     z-index: 99;
     top: 0;
-    /* max-width: 1920px; */
     margin: 0 auto;
     width: 100%;
     height: 64px;
@@ -161,15 +167,15 @@ img[alt="Tifi-Bird"] {
     font-size: 2.5rem;
     border-radius: 3rem;
     padding: 0 0 4px 3px;
-    transition: all 0.1s ease-out;
-    box-shadow: 0px 6px 0px 0px rgb(0 0 0 / 75%);
+    /* transition: all 0.1s ease-out;
+    box-shadow: 0px 6px 0px 0px rgb(0 0 0 / 75%); */
 }
-.next-btn:hover {
+/* .next-btn:hover {
     box-shadow: 0px 3px 0px 0px rgb(0 0 0 / 75%);
 }
 .next-btn:active {
     box-shadow: none;
-}
+} */
 .next-btn.plan {
     background-color: var(--gotifi-orange);
 }
@@ -208,7 +214,6 @@ img[alt="Tifi-Bird"] {
 }
 .hero-section .top-copywriting {
     top: 5px;
-    position: absolute;
     width: 80%;
 }
 .body-copywriting {
@@ -220,11 +225,25 @@ img[alt="Tifi-Bird"] {
     width: 30%;
     font-size: 0.85rem;
 }
+.color-shape-btn {
+    filter: drop-shadow(0px 10px 2px rgb(0 0 0 / 0.85));
+}
+.color-shape-btn:hover {
+    filter: drop-shadow(0px 6px 2px rgb(0 0 0 / 0.85));
+    animation: shake .2s linear;
+}
+@keyframes shake {
+    0% {transform: translateX(0rem);}
+    40% {transform: translateX(0.3rem);}
+    40% {transform: translateX(0rem);}
+    80% {transform: translateX(-0.3rem);}
+    100% {transform: translateX(0rem);}
+}
+.color-shape-btn:active {
+    filter: none;
+}
 
 /* PLAN SECTION */
-.plan-section {
-    overflow-y: clip;  
-}
 .plan-section .track-cover {
     height: 100%;
     top: 0;
@@ -242,16 +261,16 @@ img[alt="Tifi-Bird"] {
     right: 0;
 }
 .step-plan:nth-of-type(1) {
-    transform: translate(-22.55%, 5rem);
+    transform: translate(-26%, 4rem);
 }
 .step-plan:nth-of-type(2) {
-    transform: translate(-50%, 5rem);
+    transform: translate(-59%, 7.5rem);
 }
 .step-plan:nth-of-type(3) {
-    transform: translate(-29%, 2.5rem);
+    transform: translate(-30%, 6.5rem);
 }
 .step-plan:nth-of-type(4) {
-    transform: translate(-58%, -1rem);
+    transform: translate(-66%, -0.5rem);
 }
 .step-plan img {
     width: 9rem;
@@ -293,13 +312,13 @@ img[alt="Tifi-Bird"] {
     background-color: var(--gotifi-blue);
 }
 .product-container {
-    width: 80%;
+    width: 90%;
     margin-top: 3.5rem;
 }
 .product-content {
     width: 30%;
     color: var(--white);
-    border-radius: 2.5rem 0 14rem 0;
+    border-radius: 2.5rem 0 13rem 0;
 }
 .product-content:nth-of-type(1) {
     background-color: var(--gotifi-orange);
@@ -320,11 +339,11 @@ img[alt="Tifi-Bird"] {
     margin-top: 0.5rem;
     font-size: 1rem;
     overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   line-clamp: 3;
-   -webkit-line-clamp: 3; /* number of lines to show */
-   -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
 .product-cover {
     aspect-ratio: 1/1;
@@ -335,7 +354,6 @@ img[alt="Tifi-Bird"] {
 .tifi-product-bird {
     transform: scaleX(-1);
     filter: drop-shadow(0px 2px 2px var(--black));
-    position: absolute;
     bottom: 95%;
 }
 .exclusive-btn {
@@ -378,15 +396,57 @@ img[alt="Tifi-Bird"] {
     z-index: 1;
 }
 
+/* STATE SECTION */
+.state-section {
+    background-color: var(--gotifi-yellow);
+    overflow-x: auto;
+}
+.state-section .track-cover:not(.mobile) {
+    width: 295%;
+}
+.state-section .head-copywriting {
+    transform-origin: 60% 0rem;
+}
+.state-section .head-copywriting h1 {
+    font-size: 2.5rem;
+}
+.state-section .head-copywriting h1.state {
+    font-family: 'PT Sans', sans-serif;
+    color: var(--gotifi-red);
+    font-size: 1.25rem;
+}
+.state-place-content img {
+    width: 12rem;
+}
+.state-btn {
+    display: none;
+}
+.state-section::-webkit-scrollbar {
+    height: 1.5svh;
+}
+.state-section::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 1);
+    background-color: var(--gotifi-yellow);
+}
+.state-section::-webkit-scrollbar-thumb {
+    height: 1.5svh;
+    background-color: var(--gotifi-blue);
+}
+.state-section::-webkit-scrollbar-thumb:hover {
+    background-color: var(--gotifi-blue);
+}
+.state-section::-webkit-scrollbar:vertical {
+    display: none;
+}
+
 /* CONTACT SECTION */
 .contact-section {
-    aspect-ratio: 3/1.5;
+    aspect-ratio: 3/2;
 }
 .contact-background {
     background-color: var(--gotifi-blue);
     width: 104%;
     height: calc(120% + 8rem);
-    position: absolute;
     transform: rotate(-5deg);
     border-radius: 0 0 10rem;
     bottom: 0%;
@@ -394,9 +454,6 @@ img[alt="Tifi-Bird"] {
 }
 .contact-form {
     padding-left: 4rem;
-}
-.contact-form form {
-    overflow: hidden;
 }
 .contact-form .contact-input, .contact-form .contact-submit {
     font-size: 0.85rem;
@@ -435,9 +492,11 @@ img[alt="Tifi-Bird"] {
     cursor: pointer;
 }
 .contact-section .track-cover {
-    height: 100%;
+    height: fit-content;
     top: 0;
     z-index: 0;
+    width: 100%;
+    right: 3%;
 }
 
 /* SIDE MENU */
@@ -471,6 +530,12 @@ img[alt="Tifi-Bird"] {
     .head-copywriting p, .head-copywriting h1 {
         font-size: 2rem;
     }
+    .state-section .head-copywriting h1 {
+        font-size: 1.85rem;
+    }
+    .state-section .head-copywriting h1.state {
+        font-size: 1rem;
+    }
     .head-copywriting p {
         font-size: 1.25rem;
     }
@@ -491,26 +556,6 @@ img[alt="Tifi-Bird"] {
     }
 }
 @media screen and (max-width: 1023px) {
-    /* FOR NOW */
-    .track-cover {
-        display: none!important;
-    }
-    .hero-section::after, .plan-section::after {
-        content: '';
-        width: 100%;
-        height: 105%;
-        position: absolute;
-        background: var(--gotifi-yellow);
-    }
-    .hero-section::after {
-        bottom: 0;
-        border-radius: 100% 0 0 0;
-    }
-    .plan-section::after {
-        top: 0;
-        border-radius: 0 0 0 100%;
-    }
-
     /* NAV */
     .menu-container .menu-content, .menu-container .menu-icon-container, .hero-section img[alt="Background-1"], .plan-section img[alt="Background-2"] {
         display: none!important;
@@ -534,7 +579,7 @@ img[alt="Tifi-Bird"] {
         margin-top: 4rem;
     }
     .plan-section, .exclusive-section {
-        aspect-ratio: 2/3.7;
+        aspect-ratio: 2/3.65;
     }
     .hero-section .head-copywriting, .plan-section .head-copywriting {
         transform-origin: unset;
@@ -546,6 +591,9 @@ img[alt="Tifi-Bird"] {
     .next-btn {
         width: 2.75rem;
         height: 2.75rem;
+    }
+    .track-cover {
+        display: none!important;
     }
     .track-cover.mobile {
         display: initial!important;
@@ -584,6 +632,17 @@ img[alt="Tifi-Bird"] {
         top: unset;
         bottom: 2rem;
         right: unset;
+    }
+    .hero-section::after, .plan-section::after {
+        content: '';
+        width: 100%;
+        height: 105%;
+        position: absolute;
+        background: var(--gotifi-yellow);
+    }
+    .hero-section::after {
+        bottom: 0;
+        border-radius: 100% 0 0 0;
     }
 
     /* PLAN SECTION */
@@ -640,7 +699,11 @@ img[alt="Tifi-Bird"] {
     .plan-section .track-cover.mobile {
         height: unset;
         z-index: 1;
+        top: -7px;
+    }
+    .plan-section::after {
         top: 0;
+        border-radius: 0 0 0 100%;
     }
 
     /* EXLCUSIVE SECTION */
@@ -661,7 +724,7 @@ img[alt="Tifi-Bird"] {
 
     /* PARTNER SECTION */
     .partner-section {
-        aspect-ratio: 2/3;
+        aspect-ratio: 2/2.8;
     }
     .partner-container {
         width: 80%;
@@ -678,7 +741,23 @@ img[alt="Tifi-Bird"] {
     .partners-btn {
         margin-bottom: 1rem;
         transform: rotate(15deg);
-        transform-origin: 85% -10rem;
+        transform-origin: 100% -10rem;
+    }
+
+    /* STATE SECTION */
+    .state-section {
+        overflow-x: unset;
+    }
+    .state-section .section-container {
+        position: absolute;
+        left: 0.5rem;
+        height: 96%!important;
+    }
+    .state-section .plan-btn {
+        transform: translate(20%, 3rem);
+    }
+    .state-btn {
+        display: flex;
     }
 
     /* CONTACT SECTION */
@@ -746,7 +825,6 @@ img[alt="Tifi-Bird"] {
         font-size: 0.65rem!important;
     }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .hero-section .hero-cover {
         max-width: unset;
@@ -790,7 +868,6 @@ img[alt="Tifi-Bird"] {
     .product-content:nth-of-type(2) {
         display: flex!important;
     }
-
     .exclusive-btn {
         transform-origin: 60% -3rem;
     }
@@ -804,8 +881,8 @@ img[alt="Tifi-Bird"] {
         right: -3rem;
     }
 }
-
 @media screen and (min-width: 1240px) {
+    /* HERO SECTION */
     .menu-container .menu-content {
         margin-left: 3rem;
     }
@@ -824,22 +901,25 @@ img[alt="Tifi-Bird"] {
         margin-top: 8rem;
     }
     .step-plan:nth-of-type(1) {
-        transform: translate(-24%, 6rem);
+        transform: translate(-28%, 6rem);
     }
     .step-plan:nth-of-type(2) {
-        transform: translate(-53%, 5rem);
+        transform: translate(-62%, 10rem);
     }
     .step-plan:nth-of-type(3) {
-        transform: translate(-31%, 1rem);
+        transform: translate(-35%, 7rem);
     }
     .step-plan:nth-of-type(4) {
-        transform: translate(-62%, -4rem);
+        transform: translate(-70%, -4rem);
     }
     .top-copywriting.plan-step img {
         transform: scaleX(-1) translate(-8rem, -2rem);
     }
 
     /* EXCLUSIVE SECTION */
+    .product-container {
+        width: 80%;
+    }
     .product-content {
         border-radius: 2.5rem 0 16rem 0;
     }
@@ -853,7 +933,21 @@ img[alt="Tifi-Bird"] {
         font-size: 1.25rem;
     }
 
+    /* STATE SECTION */
+    .state-section .track-cover:not(.mobile) {
+        width: 298%;
+    }
+    .state-section .head-copywriting h1 {
+        font-size: 3rem;
+    }
+
     /* CONTACT SECTION */
+    .contact-section {
+        aspect-ratio: 3/1.5;
+    }
+    .contact-section .track-cover {
+        right: 1.28rem;
+    }
     .contact-section .contact-box {
         transform: translateY(-4rem);
     }
@@ -868,6 +962,18 @@ img[alt="Tifi-Bird"] {
     .top-copywriting.plan-step img {
         transform: scaleX(-1) translate(-11rem, 0rem);
     }
+    .step-plan img {
+        width: 12rem;
+    }
+    .step-plan:nth-of-type(1) {
+        transform: translate(-28%, 8rem);
+    }
+    .step-plan:nth-of-type(2) {
+        transform: translate(-62%, 11rem);
+    }
+    .step-plan:nth-of-type(3) {
+        transform: translate(-34%, 9rem);
+    }
     .exclusive-btn {
         transform-origin: 80% -100%;
     }
@@ -875,8 +981,3 @@ img[alt="Tifi-Bird"] {
         margin-top: -3rem;
     }
 }
-
-/* DELETE WHEN FINALIZE */
-/* section {
-    border-bottom: 2px solid var(--gotifi-red);
-} */
