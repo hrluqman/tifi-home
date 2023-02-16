@@ -760,6 +760,9 @@ img[alt="Tifi-Bird"] {
     .state-btn {
         display: flex;
     }
+    state-web-btn {
+        display: none!important;
+    }
 
     /* CONTACT SECTION */
     .contact-section .section-container > div {
