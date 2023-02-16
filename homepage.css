@@ -760,7 +760,7 @@ img[alt="Tifi-Bird"] {
     .state-btn {
         display: flex;
     }
-    state-web-btn {
+    .state-web-btn {
         display: none!important;
     }
 
