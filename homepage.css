@@ -566,9 +566,9 @@ img[alt="Tifi-Bird"] {
     .menu-container .logo {
         width: 70px;
     }
-    .menu-container .menu-hamburger {
+/*     .menu-container .menu-hamburger {
         display: unset;
-    }
+    } */
 
     /* GENERAL SECTION */
     section, .exclusive-section, .contact-section {
