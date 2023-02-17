@@ -44,8 +44,6 @@ input::-webkit-inner-spin-button {
 }
 
 .main-container {
-    width: 100%;
-    width: 100dvw;
     max-width: 1920px;
     margin: 0 auto;
     overflow-x: clip;
