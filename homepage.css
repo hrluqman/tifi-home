@@ -556,7 +556,7 @@ img[alt="Tifi-Bird"] {
     }
 }
 @media screen and (max-width: 1023px) {
-    .plan-section, .partner-section, .state-section, .contact-section, nav.home-nav {
+    .plan-section, .exclusive-section, .state-section, .contact-section, nav.home-nav {
         display: none!important;
     }
     /* NAV */
