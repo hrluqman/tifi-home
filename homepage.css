@@ -556,6 +556,9 @@ img[alt="Tifi-Bird"] {
     }
 }
 @media screen and (max-width: 1023px) {
+    .contact-section {
+        display: none!important;
+    }
     /* NAV */
     .menu-container .menu-content, .menu-container .menu-icon-container, .hero-section img[alt="Background-1"], .plan-section img[alt="Background-2"] {
         display: none!important;
@@ -566,9 +569,9 @@ img[alt="Tifi-Bird"] {
     .menu-container .logo {
         width: 70px;
     }
-/*     .menu-container .menu-hamburger {
+    .menu-container .menu-hamburger {
         display: unset;
-    } */
+    }
 
     /* GENERAL SECTION */
     section, .exclusive-section, .contact-section {
@@ -806,7 +809,6 @@ img[alt="Tifi-Bird"] {
         position: absolute;
         right: -10rem;
         bottom: -2rem;
-        display: none!important;
     }
     .contact-section > div:not(.section-container) {
         width: 85%!important;
