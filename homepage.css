@@ -806,6 +806,7 @@ img[alt="Tifi-Bird"] {
         position: absolute;
         right: -10rem;
         bottom: -2rem;
+        display: none!important;
     }
     .contact-section > div:not(.section-container) {
         width: 85%!important;
